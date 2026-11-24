@@ -1,0 +1,188 @@
+.head {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 10px;
+}
+
+.head h2 {
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.count {
+	color: var(--ink-soft);
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.card > a {
+	display: flex;
+	flex-direction: column;
+	gap: 1px;
+	height: 100%;
+	padding-bottom: 10px;
+	background: var(--card);
+	box-shadow: var(--shadow);
+	color: var(--ink);
+	text-decoration: none;
+	transition: box-shadow 0.2s;
+}
+
+.card > a:hover {
+	box-shadow: var(--shadow-lift);
+}
+
+.card > a:active {
+	translate: 0 1px;
+}
+
+.thumb {
+	display: block;
+	width: 100%;
+	aspect-ratio: 1;
+	margin-bottom: 5px;
+	object-fit: cover;
+	background: #d4d4d4;
+}
+
+.title {
+	overflow: hidden;
+	padding: 0 7px;
+	font-size: 16px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.card > a:hover .title {
+	text-decoration: underline;
+}
+
+.meta {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 0 7px;
+	color: var(--ink-soft);
+	font-size: 12px;
+}
+
+.thumbIcon {
+	width: 12px;
+	height: 12px;
+	fill: var(--ink-soft);
+}
+
+.free {
+	color: var(--green);
+	font-weight: 600;
+}
+
+/* ---------- Package thumbnails ---------- */
+
+.featureThumb {
+	position: relative;
+	display: grid;
+	place-items: center;
+	width: 100%;
+	aspect-ratio: 1;
+	margin-bottom: 5px;
+	overflow: hidden;
+	background:
+		var(--stud) 0 0 / 12px 12px,
+		radial-gradient(circle at 50% 40%, rgba(255, 255, 255, 0.22), transparent 65%),
+		var(--tone, #3b1f5e);
+	color: #fff;
+}
+
+.featureThumb[data-group='Gameplay'] {
+	--tone: #4a2a7a;
+}
+
+.featureThumb[data-group='Movement'] {
+	--tone: #1d6fa5;
+}
+
+.featureThumb[data-group='Environment'] {
+	--tone: #3f5566;
+}
+
+.featureThumb[data-group='TREK add-on'] {
+	--tone: #4f5a2c;
+}
+
+.featureThumb[data-group='Spearhead add-on'] {
+	--tone: #7a2a2a;
+}
+
+.featureThumb[data-group='AI'] {
+	--tone: #2c4a3a;
+}
+
+.thumbImg {
+	object-fit: contain;
+	padding: 18%;
+	filter: drop-shadow(0 2px 0 rgba(0, 0, 0, 0.25));
+}
+
+/* Full illustrations and photos, not icons: fill the tile */
+.featureThumb[data-group='TREK add-on'] .thumbImg,
+.featureThumb[data-group='Movement'] .thumbImg,
+.featureThumb[data-group='Environment'] .thumbImg {
+	object-fit: cover;
+	padding: 0;
+	filter: none;
+}
+
+.thumbName {
+	padding: 0 10%;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 1.15;
+	text-align: center;
+	text-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.big .thumbName {
+	font-size: 34px;
+}
+
+.thumbTag {
+	position: absolute;
+	right: 6px;
+	bottom: 6px;
+	padding: 0 5px;
+	border-radius: 2px;
+	background: rgba(0, 0, 0, 0.35);
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 0.05em;
+}
+
+.big {
+	margin: 0;
+}
+
+.big .thumbTag {
+	right: 12px;
+	bottom: 12px;
+	font-size: 14px;
+}
+
+@media (max-width: 640px) {
+	.grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+.featureThumb[data-group='Tools'] {
+	--tone: #26222e;
+}

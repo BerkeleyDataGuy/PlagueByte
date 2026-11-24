@@ -1,0 +1,262 @@
+.player {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 13px;
+}
+
+.mode {
+	display: flex;
+	flex-direction: column;
+	color: var(--ink-soft);
+	font-size: 12px;
+}
+
+.mode span:last-child {
+	color: var(--ink);
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.screen {
+	position: relative;
+	aspect-ratio: 1;
+	overflow: hidden;
+	background: #d4d4d4;
+}
+
+.art {
+	object-fit: cover;
+}
+
+.noArt {
+	display: grid;
+	place-items: center;
+	height: 100%;
+	color: #fff;
+	font-size: 48px;
+}
+
+.info {
+	min-width: 0;
+}
+
+.title,
+.artist {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.title {
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.artist {
+	color: var(--ink-soft);
+}
+
+.seek {
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.seek input[type='range'] {
+	width: 100%;
+	height: 14px;
+	margin: 0;
+	background: transparent;
+	appearance: none;
+	cursor: pointer;
+}
+
+.seek input[type='range']:disabled {
+	cursor: default;
+}
+
+.seek input[type='range']::-webkit-slider-runnable-track {
+	height: 4px;
+	border-radius: 2px;
+	background: linear-gradient(to right, var(--blue) var(--fill, 0%), var(--rule) var(--fill, 0%));
+}
+
+.seek input[type='range']::-moz-range-track {
+	height: 4px;
+	border-radius: 2px;
+	background: linear-gradient(to right, var(--blue) var(--fill, 0%), var(--rule) var(--fill, 0%));
+}
+
+.seek input[type='range']::-webkit-slider-thumb {
+	width: 12px;
+	height: 12px;
+	margin-top: -4px;
+	border: 0;
+	border-radius: 50%;
+	background: var(--blue-press);
+	appearance: none;
+}
+
+.seek input[type='range']::-moz-range-thumb {
+	width: 12px;
+	height: 12px;
+	border: 0;
+	border-radius: 50%;
+	background: var(--blue-press);
+}
+
+.times {
+	align-self: flex-end;
+	color: var(--ink-soft);
+	font-size: 11px;
+	font-variant-numeric: tabular-nums;
+}
+
+.transport {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+}
+
+.transport button {
+	display: grid;
+	place-items: center;
+	padding: 0;
+	border: 1px solid #b8b8b8;
+	border-radius: 3px;
+	background: #fff;
+	color: var(--ink);
+	cursor: pointer;
+}
+
+.transport button:hover {
+	border-color: var(--ink-soft);
+}
+
+.transport button:active {
+	background: #e3e3e3;
+}
+
+.transport svg {
+	width: 16px;
+	height: 16px;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.small {
+	width: 26px;
+	height: 26px;
+}
+
+.skip {
+	width: 32px;
+	height: 32px;
+}
+
+.skip svg path:last-child,
+.orb svg path {
+	fill: currentColor;
+}
+
+.transport .orb {
+	width: 42px;
+	height: 42px;
+	border-color: var(--blue);
+	border-radius: 50%;
+	background: var(--blue);
+	color: #fff;
+}
+
+.transport .orb:hover {
+	border-color: var(--blue-hover);
+	background: var(--blue-hover);
+}
+
+.transport .orb:active {
+	background: var(--blue-press);
+}
+
+.orb svg {
+	width: 20px;
+	height: 20px;
+}
+
+.orb[aria-busy='true'] {
+	opacity: 0.7;
+}
+
+/* The spacer that balances the shuffle button */
+span.small {
+	display: block;
+}
+
+.embed iframe {
+	display: block;
+	border: 0;
+}
+
+.embed[data-status='idle'] {
+	display: none;
+}
+
+.note {
+	color: var(--ink-soft);
+	font-size: 12px;
+	line-height: 1.35;
+}
+
+.queue {
+	border-top: 1px solid var(--rule);
+	padding-top: 6px;
+}
+
+.queueHead {
+	margin-bottom: 4px;
+	color: var(--ink-soft);
+	font-size: 12px;
+}
+
+.queue ol {
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.queue li button {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 4px;
+	border: 0;
+	border-radius: 3px;
+	background: none;
+	color: inherit;
+	font: inherit;
+	text-align: left;
+	cursor: pointer;
+}
+
+.queue li button:hover {
+	background: #f2f4f5;
+}
+
+.queueTitle,
+.queueArtist {
+	width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.queueArtist {
+	color: var(--ink-soft);
+	font-size: 12px;
+}
