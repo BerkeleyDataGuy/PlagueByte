@@ -39,6 +39,7 @@ export function MediaPlayer() {
 	const posRef = useRef(0);
 	const advancedFrom = useRef<string | null>(null);
 	const endTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+	const startRun = useRef(0);
 
 	useEffect(() => {
 		const next = shuffled(tracks.map((_, i) => i));
@@ -83,12 +84,16 @@ export function MediaPlayer() {
 		const host = embedHost.current;
 		if (!host) return;
 		setStatus('loading');
+		const run = ++startRun.current;
 		try {
 			const api = await loadSpotifyIframeApi();
+			if (run !== startRun.current) return;
 			// Spotify replaces this element with its iframe, so give it one React doesn't own
 			const slot = document.createElement('div');
 			host.replaceChildren(slot);
 			api.createController(slot, { uri, width: '100%', height: 80 }, (ctrl) => {
+				// A newer start (Next pressed while loading) replaced this player: drop it
+				if (run !== startRun.current) return ctrl.destroy();
 				controller.current = ctrl;
 				ctrl.addListener('ready', () => {
 					setStatus('ready');
@@ -141,30 +146,7 @@ export function MediaPlayer() {
 	const onPreview =
 		status === 'ready' && playback.duration > 0 && playback.duration <= 31000 && (current.durationMs ?? 0) > 35000;
 
-	// The Studio ribbon's Play/Stop buttons reach the player through window events
-	const commands = useRef({ play: () => {}, stop: () => {} });
-	useEffect(() => {
-		commands.current = {
-			play: () => {
-				if (!playing) togglePlay();
-			},
-			stop: () => {
-				if (playing) controller.current?.pause();
-			},
-		};
-	});
-	useEffect(() => {
-		const play = () => commands.current.play();
-		const stop = () => commands.current.stop();
-		window.addEventListener('boombox:play', play);
-		window.addEventListener('boombox:stop', stop);
-		return () => {
-			window.removeEventListener('boombox:play', play);
-			window.removeEventListener('boombox:stop', stop);
-		};
-	}, []);
-
-	// Tell the Output window once per song
+	// Tell the dock bar once per song
 	const announced = useRef<string | null>(null);
 	useEffect(() => {
 		if (!playing || announced.current === current.id) return;

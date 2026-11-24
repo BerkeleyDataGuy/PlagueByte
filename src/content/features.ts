@@ -1,5 +1,5 @@
-// Generated from the Korblox Builds repo (main, 2026-11-24).
-// `code` is an exact excerpt of the named file. Spearhead entries without `href` live only in the Spearhead Studio place.
+// Built from the Korblox Builds repo, then edited by hand (thumbnails, Admin Terminal card, anonymous links).
+// `code` is an exact excerpt of the named file. Entries without `href` are not downloadable yet.
 
 export type Feature = {
 	slug: string;
@@ -504,5 +504,5 @@ export const features: Feature[] = [
 ];
 
 /** Systems you can download from the repo */
-export const packages = features.filter((f) => !f.studio);
+export const packages = features.filter((f) => f.href);
 export const luauLines = packages.reduce((n, f) => n + (f.lines ?? 0), 0);

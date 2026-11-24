@@ -1,7 +1,7 @@
 export const site = {
 	name: 'PlagueByte',
 	title: 'ROBLOX',
-	description: 'PlagueByte makes Roblox games and open-source Luau systems: Korblox Builds, ten drop-in packages.',
+	description: 'PlagueByte makes Roblox games and open-source Luau systems: Korblox Builds, free drop-in Luau packages.',
 	/** Roblox profile bio, word for word */
 	motto: 'guaranteed back-end project in <5 days',
 	joined: 'April 2020',
