@@ -45,7 +45,7 @@ export default function Home() {
 							Roblox Profile
 						</a>
 						<a className={styles.ghostBtn} href={site.github} target="_blank" rel="noopener noreferrer">
-							Korblox Builds on GitHub
+							Korblox Builds source
 						</a>
 					</div>
 				</div>
@@ -101,7 +101,7 @@ export default function Home() {
 							See the package
 						</Link>
 						<a className={styles.ghostBtn} href={repoUrl} target="_blank" rel="noopener noreferrer">
-							All {packages.length} on GitHub
+							All {packages.length} in the repo
 						</a>
 					</div>
 				</div>

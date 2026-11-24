@@ -45,7 +45,7 @@ export function Shell({ children }: { children: ReactNode }) {
 						<span className="sr-only"> total visits</span>
 					</span>
 					<a className={styles.topLink} href={site.github} target="_blank" rel="noopener noreferrer">
-						GitHub
+						Source
 					</a>
 				</div>
 			</header>
@@ -85,7 +85,7 @@ export function Shell({ children }: { children: ReactNode }) {
 						Roblox Profile
 					</a>
 					<a href={site.github} target="_blank" rel="noopener noreferrer">
-						GitHub
+						Source
 					</a>
 				</nav>
 				<p>

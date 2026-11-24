@@ -9,7 +9,7 @@ export type Feature = {
 	summary: string[];
 	controls?: [string, string][];
 	requires?: string;
-	/** Folder on GitHub */
+	/** Folder in the repo */
 	href?: string;
 	/** True for systems built in the Spearhead Studio place and not in the repo */
 	studio?: boolean;
@@ -22,7 +22,7 @@ export type Feature = {
 	image?: string;
 };
 
-export const repoUrl = 'https://github.com/KwunNChen/Korblox-Builds';
+export const repoUrl = 'https://anonymous.4open.science/r/Korblox-Builds-8501/';
 
 export const features: Feature[] = [
 	{
@@ -34,7 +34,7 @@ export const features: Feature[] = [
 			"On death, each R6 joint is swapped for a limited BallSocketConstraint so the body falls instead of freezing.",
 			"Other death systems can opt out by setting a SuppressRagdoll attribute on the character first."
 		],
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/WIP/RagdollDeath",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/WIP/RagdollDeath",
 		"files": 1,
 		"lines": 82,
 		"codeFile": "ragdoll.luau",
@@ -50,7 +50,7 @@ export const features: Feature[] = [
 			"The screen fades to black and the Evil Skull Man fades in, skull first, then the camera pulls back to his top half while a clip plays. When it ends you respawn behind the black and it fades away. The rig renders in a ViewportFrame, so it never exists in Workspace.",
 			"The server holds each respawn until that player’s screen finishes, with a timeout as a safety net, and an admin respawn still cuts it short. Works alongside R6 Ragdoll and Random Artillery’s dismemberment, which carry on behind the black."
 		],
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/Gameplay/Skull%20Death%20Screen",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/Gameplay/Skull%20Death%20Screen",
 		"files": 3,
 		"lines": 235,
 		"codeFile": "DeathScreenRuntime.server.luau",
@@ -88,7 +88,7 @@ export const features: Feature[] = [
 				"Jump"
 			]
 		],
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/Gameplay/Ski",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/Gameplay/Ski",
 		"files": 14,
 		"lines": 2650,
 		"codeFile": "SkiConfig.luau",
@@ -104,7 +104,7 @@ export const features: Feature[] = [
 			"Storms run on a cycle, snow stops when you walk under a roof, and getting caught out in one slows you down. Lightning comes with the thunderstorm.",
 			"The server ticks the storm four times a second and the client smooths between those values, so the weather stays in sync without flooding replication."
 		],
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/Gameplay/Variable%20Snowstorm",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/Gameplay/Variable%20Snowstorm",
 		"files": 10,
 		"lines": 1564,
 		"codeFile": "WeatherConfig.luau",
@@ -119,7 +119,7 @@ export const features: Feature[] = [
 			"Every message plays talk blips from the speaker’s head, a few letters per blip, in a voice pitch that changes each life.",
 			"Text is formatted like a novel: speech gets quotes, *stars* become grey italic actions that make no sound, and plain speech gets a tag from its punctuation, so “where are we?” reads “Where are we?” PlagueByte asks. Commands starting with / or : are left alone."
 		],
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/Tools/Chat%20Voices",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/Tools/Chat%20Voices",
 		"files": 2,
 		"lines": 137,
 		"codeFile": "ChatActions.client.luau",
@@ -136,7 +136,7 @@ export const features: Feature[] = [
 			"Every effect runs on the server so everyone sees it, and the effect lands on the caster animation’s release frame. Drop the one Script in ServerScriptService and it moves the tool, the soul client and the animations into place."
 		],
 		"image": "/images/features/hammer.png",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/Tools/Dark%20Magic",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/Tools/Dark%20Magic",
 		"files": 3,
 		"lines": 2750,
 		"codeFile": "DarkMagic.server.luau",
@@ -154,7 +154,7 @@ export const features: Feature[] = [
 			"Every mass respawn unequips Spearhead guns first, so nobody comes back stuck in first person."
 		],
 		"requires": "Spearhead (the HUD and scenes live in the Spearhead place)",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/Gameplay/Objective%20System",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/Gameplay/Objective%20System",
 		"files": 2,
 		"lines": 266,
 		"codeFile": "MainHandler.server.luau",
@@ -171,7 +171,7 @@ export const features: Feature[] = [
 			"No TREK script is edited: it plugs into Custom Bullets’ own BulletTypes extension point. Hits are found by sweeping the blade across the thrust instead of trusting Touched, so a fast blade cannot tunnel through a torso."
 		],
 		"requires": "TREK with Custom Bullets",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/TREK/Bayonet",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/TREK/Bayonet",
 		"files": 8,
 		"lines": 1020,
 		"codeFile": "BayonetConfig.luau",
@@ -188,7 +188,7 @@ export const features: Feature[] = [
 			"The first TREK tool that is not a gun: it installs a new \"Throwable\" tool handler and does not modify a single core file."
 		],
 		"requires": "TREK 4",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/TREK/Gas%20Grenade",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/TREK/Gas%20Grenade",
 		"files": 12,
 		"lines": 1893,
 		"codeFile": "GasConfig.luau",
@@ -205,7 +205,7 @@ export const features: Feature[] = [
 			"It hooks into whatever TREK install you already have without modifying it. Delete the folder and your install is exactly as it was."
 		],
 		"requires": "TREK 4",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/TREK/Parkour",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/TREK/Parkour",
 		"files": 10,
 		"lines": 1273,
 		"codeFile": "ParkourConfig.luau",
@@ -222,7 +222,7 @@ export const features: Feature[] = [
 			"Nothing in TREK is edited. It waits for TREK on its own, so load order does not matter, and it accepts sound ids in every format Roblox has used."
 		],
 		"requires": "TREK",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/TREK/Voicelines",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/TREK/Voicelines",
 		"files": 5,
 		"lines": 766,
 		"codeFile": "VoicelineConfig.luau",
@@ -238,7 +238,7 @@ export const features: Feature[] = [
 			"You hear the guns fire, you get a few seconds, then a dozen-odd shells arc in and anything caught in the open comes apart.",
 			"The warning lead is the mechanic: the guns sound about twelve seconds before the first crater, enough to cross open ground and get behind something. Barrages skip servers too small to be worth shelling."
 		],
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/Random%20Arty",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/Random%20Arty",
 		"files": 14,
 		"lines": 2158,
 		"codeFile": "ArtilleryConfig.luau",
@@ -342,7 +342,7 @@ export const features: Feature[] = [
 			"It respects sides: no team damage unless the game allows it, and a reported hit has to land within 3 studs of the part it claims, so a client cannot fake one from across the map. In a game without Spearhead it does nothing."
 		],
 		"requires": "Spearhead",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/Shared",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/Shared",
 		"files": 1,
 		"lines": 113,
 		"codeFile": "Spearhead.server.luau",
@@ -358,7 +358,7 @@ export const features: Feature[] = [
 			"Bloxians hunt players and other teams: they shoot, reload, throw grenades at clusters, knife anything that gets close, ragdoll when they die and respawn. They fight as fire teams and squads and call contacts out to each other.",
 			"Morale drops when a friend dies nearby or they get hit. A shaken soldier aims worse and hides longer; a broken one runs, only firing at anyone who gets close, until he rallies. The Bloxian Spawner tool drops soldiers, sniper teams, AT teams, vehicles and kinetic events wherever you click."
 		],
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/Bloxian",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/Bloxian",
 		"files": 38,
 		"lines": 11459,
 		"codeFile": "MoraleModule.luau",
@@ -374,7 +374,7 @@ export const features: Feature[] = [
 			"Bloxian soldiers, the spawner tool, the Vehicle Spawner, Warthog, Abrams, Apache, F-4 Phantom, AC-130, AA Truck and Random Arty in a single .rbxm.",
 			"Insert it, paste one line into the Command Bar, save. Run it again with a newer file to update: folders merge, everything else is replaced."
 		],
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/KorbloxAI",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/KorbloxAI",
 		"files": 1,
 		"lines": 33,
 		"codeFile": "Install.luau",
@@ -391,7 +391,7 @@ export const features: Feature[] = [
 			"Gunner only turns a vehicle into an emplacement. Aircraft come in the air with a full crew, and any model built the same way that you drop in the folder shows up in the list."
 		],
 		"requires": "Bloxian",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/Vehicle%20Spawner",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/Vehicle%20Spawner",
 		"files": 1,
 		"lines": 247,
 		"codeFile": "init.server.luau",
@@ -408,7 +408,7 @@ export const features: Feature[] = [
 			"The hull is not on physics wheels. The script works out where it should be every frame: it follows the ground, tilts with slopes, climbs bumps up to 2 studs, stops at anything taller and drops off edges."
 		],
 		"requires": "Bloxian (for NPC crews)",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/Abrams",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/Abrams",
 		"files": 2,
 		"lines": 921,
 		"codeFile": "Tank.server.luau",
@@ -425,7 +425,7 @@ export const features: Feature[] = [
 			"It holds its hover height over the highest ground under it and just ahead, climbs straight up off anything it would fly into, and leans and banks with speed and turns."
 		],
 		"requires": "Bloxian (for NPC crews)",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/Apache",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/Apache",
 		"files": 2,
 		"lines": 621,
 		"codeFile": "Heli.server.luau",
@@ -442,7 +442,7 @@ export const features: Feature[] = [
 			"Each Phantom patrols its own spot off the players, so dogfights break out across the map instead of all on top of them."
 		],
 		"requires": "Vehicle Spawner",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/F4",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/F4",
 		"files": 1,
 		"lines": 843,
 		"codeFile": "Jet.server.luau",
@@ -459,7 +459,7 @@ export const features: Feature[] = [
 			"An enemy F-4 Phantom can shoot it down."
 		],
 		"requires": "Bloxian, Random Arty",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/AC130",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/AC130",
 		"files": 1,
 		"lines": 257,
 		"codeFile": "Gunship.server.luau",
@@ -476,7 +476,7 @@ export const features: Feature[] = [
 			"It drives like the Abrams, held on the ground by script rather than physics wheels, and steers like a truck, turning only while it rolls."
 		],
 		"requires": "Bloxian, Vehicle Spawner",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/AA%20Truck",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/AA%20Truck",
 		"files": 2,
 		"lines": 690,
 		"codeFile": "Truck.server.luau",
@@ -493,7 +493,7 @@ export const features: Feature[] = [
 			"Players can drive it too. Wrecked, flipped or abandoned, it respawns where you placed it."
 		],
 		"requires": "Bloxian (for NPC crews)",
-		"href": "https://github.com/KwunNChen/Korblox-Builds/tree/main/AI/Warthog",
+		"href": "https://anonymous.4open.science/r/Korblox-Builds-8501/AI/Warthog",
 		"files": 2,
 		"lines": 390,
 		"codeFile": "Listener.server.luau",

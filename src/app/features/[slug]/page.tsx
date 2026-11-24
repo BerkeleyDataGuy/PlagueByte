@@ -42,7 +42,7 @@ export default async function FeaturePage({ params }: PageProps<'/features/[slug
 						<strong>{f.href ? 'Free' : 'In development'}</strong>
 						{f.href && (
 							<a className="btn-green" href={f.href} target="_blank" rel="noopener noreferrer">
-								Get on GitHub
+								Get the code
 							</a>
 						)}
 					</div>

@@ -6,7 +6,7 @@ export const site = {
 	motto: 'guaranteed back-end project in <5 days',
 	joined: 'April 2020',
 	profile: 'https://www.roblox.com/users/1564226463/profile',
-	github: 'https://github.com/KwunNChen/Korblox-Builds',
+	github: 'https://anonymous.4open.science/r/Korblox-Builds-8501/',
 	headshot: '/images/headshot-plaguebyte.png',
 	avatar: '/images/avatar-plaguebyte.png',
 };

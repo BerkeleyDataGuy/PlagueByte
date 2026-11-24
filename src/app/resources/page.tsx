@@ -23,7 +23,7 @@ export default function ResourcesPage() {
 						</span>
 						<div>
 							<h3>Korblox Builds</h3>
-							<p className={styles.rowMeta}>GitHub · MIT license · {packages.length} packages · {luau.toLocaleString('en-US')} lines of Luau</p>
+							<p className={styles.rowMeta}>Source code · MIT license · {packages.length} packages · {luau.toLocaleString('en-US')} lines of Luau</p>
 							<p>
 								The source for every package on the Features tab (Spearhead systems aside). Most packages ship as an .rbxm plus Rojo project files,
 								with a README inside that walks through the install step by step.
